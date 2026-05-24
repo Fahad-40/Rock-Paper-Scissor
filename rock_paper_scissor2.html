@@ -25,12 +25,9 @@
         tie: 0
     };
 
-let localstorageScore = localStorage.getItem('LSscore');
+let localstorageScore = JSON.parse((localStorage.getItem('LSscore')));
 
-    if (localstorageScore) {
-        score = JSON.parse(localstorageScore);
-    }
-
+   
     function playGame(userChoice) {
 
 const computerChoice = getComputerChoice();
